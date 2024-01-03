@@ -15,12 +15,22 @@ steps:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-connection'
     cmd: 'oc start-build nodejs-ex --follow'
-    #cmd: 'oc new-app https://github.com/SwathyPraveen/nodejs-ex -l name=vssummit-app'
-#- task: oc-cmd@2
-#  inputs:
-#    connectionType: 'OpenShift Connection Service'
-#    openshiftService: 'openshift-connection'
-#    cmd: 'oc start-build nodejs-ex --follow'    
+
+# Placeholder for code analysis task (replace with actual task)
+# - task: CodeAnalysisTask@1
+#   inputs:
+#     ...
+
+# Placeholder for saving build artifacts (replace with actual task)
+# - task: PublishBuildArtifacts@1
+#   inputs:
+#     ...
+
+# Placeholder for deployment task (replace with actual task)
+# - task: DeploymentTask@1
+#   inputs:
+#     ...
+
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
