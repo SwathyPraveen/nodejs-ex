@@ -7,22 +7,22 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'default'
 
 steps:
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'os-conn'
-    #cmd: 'oc start-build nodejs-ex --follow'
-    cmd: 'oc new-app https://github.com/rcarneironet/nodejs-ex -l name=vssummit-app'
+    openshiftService: 'openshift-connection'
+    cmd: 'oc start-build nodejs-ex --follow'
+    #cmd: 'oc new-app https://github.com/SwathyPraveen/nodejs-ex -l name=vssummit-app'
+#- task: oc-cmd@2
+#  inputs:
+#    connectionType: 'OpenShift Connection Service'
+#    openshiftService: 'openshift-connection'
+#    cmd: 'oc start-build nodejs-ex --follow'    
 - task: oc-cmd@2
   inputs:
     connectionType: 'OpenShift Connection Service'
-    openshiftService: 'os-conn'
-    cmd: 'oc start-build nodejs-ex --follow'    
-- task: oc-cmd@2
-  inputs:
-    connectionType: 'OpenShift Connection Service'
-    openshiftService: 'os-conn'
+    openshiftService: 'openshift-connection'
     cmd: 'oc status'
