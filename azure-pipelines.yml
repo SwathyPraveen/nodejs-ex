@@ -10,7 +10,7 @@ pool:
   vmImage: 'default'
 
 steps:
-- task: oc-cmd@2
+- task: oc-cmd2
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-connection'
@@ -31,7 +31,7 @@ steps:
 #   inputs:
 #     ...
 
-- task: oc-cmd@2
+- task: oc-cmd2
   inputs:
     connectionType: 'OpenShift Connection Service'
     openshiftService: 'openshift-connection'
